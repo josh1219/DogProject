@@ -22,7 +22,12 @@ public class Chat {
     private String sendTime;
 
     @ManyToOne
-    @JoinColumn(name = "midx")
+    @JoinColumn(name = "sender_midx")
     @Comment("채팅을 보낸 회원")
-    private Member member;
+    private Member sender;
+
+    @ManyToOne
+    @JoinColumn(name = "receiver_midx")
+    @Comment("채팅을 받은 회원")
+    private Member receiver;
 }

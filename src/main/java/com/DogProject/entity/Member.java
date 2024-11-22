@@ -53,7 +53,11 @@ public class Member {
     @Comment("회원의 게시글 리스트")
     private List<Board> boards;
 
-    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Comment("회원의 채팅 기록")
-    private List<Chat> chats;
+    @OneToMany(mappedBy = "sender", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @Comment("회원이 보낸 채팅 리스트")
+    private List<Chat> sentChats;
+
+    @OneToMany(mappedBy = "receiver", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @Comment("회원이 받은 채팅 리스트")
+    private List<Chat> receivedChats;
 }

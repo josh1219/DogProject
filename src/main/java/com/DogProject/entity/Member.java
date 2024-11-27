@@ -21,6 +21,18 @@ public class Member {
     @Comment("회원 이름")
     private String name;
 
+    @Column(nullable = false, length = 255)
+    @Comment("회원 이메일")
+    private String mEmail;
+
+    @Column(nullable = false, length = 255)
+    @Comment("회원 아이디")
+    private String mId;
+
+    @Column(nullable = false, length = 255)
+    @Comment("회원 비밀번호")
+    private String mPassword;
+
     @Column(nullable = false, length = 10)
     @Comment("회원 생년월일 (yyyy-MM-dd)")
     private String birthday;

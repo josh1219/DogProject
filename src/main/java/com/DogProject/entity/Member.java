@@ -1,6 +1,8 @@
 package com.DogProject.entity;
 
 import javax.persistence.*;
+
+import com.DogProject.constant.Grade;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
@@ -47,7 +49,7 @@ public class Member {
 
     @Column(length = 20)
     @Comment("회원 등급 (예: 일반, 관리자)")
-    private String grade;
+    private Grade grade;
 
     @Column(length = 10)
     @Comment("회원 가입 타입 (예: 카카오, 네이버, 구글, 사이트)")
